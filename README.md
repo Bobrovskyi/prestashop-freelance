@@ -1,0 +1,1 @@
+# Создание шаблона на Prestashop 1.7 для сайта prestashop-freelance.com
