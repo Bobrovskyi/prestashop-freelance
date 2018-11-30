@@ -1,0 +1,135 @@
+.hero {
+	@include flex-row-sb();
+
+	&__text {
+		position: relative;
+		z-index: 1;
+		width: calc(50% - 40px);
+
+		&-heading {
+			margin: 0 0 20px;
+			font: normal 43px/2 $ff-main;
+			color: #ffffff;
+
+			b {
+				display: block;
+				font-family: $ff-heading;
+				font-size: 73px;
+				line-height: 80px;
+				letter-spacing: 7.3px;
+				text-transform: uppercase;
+			}
+		}
+
+		&-descr {
+			margin: 0 0 70px;
+			font: normal 16px/1.9 $ff-main;
+			color: #9297fb;
+		}
+	}
+
+	&__btn {
+		display: inline-block;
+		padding: 20px 35px;
+		font: bold 14px/2 $ff-main;
+		color: #f5f5f5;
+		letter-spacing: 1.4px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+        background-image: linear-gradient(243deg, #9320ff 1%, #6e3bff);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+	}
+
+	&__image {
+		position: relative;
+		width: calc(50% - 40px);
+
+		.hero__people {
+			opacity: 0;
+		}
+
+		.hero__cube {
+			position: absolute;
+			bottom: 57px;
+			bottom: -100%;
+			left: -90px;
+		}
+
+		.hero__cube-big {
+			position: absolute;
+			bottom: 0;
+			bottom: -100%;
+			right: -80px;
+		}
+
+		img {
+			position: relative;
+		}
+	}
+
+	@media (min-width: 992px) {
+		padding-top: 90px;
+
+		&__text {
+			padding-top: 50px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		position: relative;
+
+		&__text {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			width: 100%;
+			text-align: center;
+			transform: translateY(-50%);
+
+			&-heading {
+				margin: 0 0 20px;
+				font-size: 22px;
+				line-height: 1;
+
+				b {
+					font-size: 35px;
+					line-height: 1.6;
+					letter-spacing: 3.5px;
+				}
+			}
+
+			&-descr {
+				margin: 0 0 20px;
+				font-size: 16px;
+				line-height: 1.4;
+				color: #9297fb;
+			}
+		}
+
+		&__btn {
+			padding: 20px 25px;
+		}
+
+		&__image {
+			position: relative;
+			width: 100%;
+			text-align: center;
+
+			.hero__cube {
+				left: 0;
+			}
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+	}
+}

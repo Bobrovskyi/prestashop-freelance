@@ -1,0 +1,39 @@
+.header {
+	background: linear-gradient(to right, #28136b, #0a29b1),
+	            url("../img/vector-smart-object-copy_2.png") no-repeat left top ,
+				url("../img/vector-smart-object-copy.png") no-repeat right top;
+	background: linear-gradient(to right, #28136b, #0a29b1);
+	background-blend-mode: overlay;
+	overflow: hidden;
+
+	&__top {
+		@include flex-row-sb();
+		align-items: center;
+		padding: 27px 0;
+	}
+
+	@media (max-width: 991px) {
+		&__top {
+			padding: 20px 0;
+		}
+	}
+}
+
+.logo {
+
+	&__link {
+		display: block;
+	}
+
+	&__image {
+		display: block;
+	}
+
+	@media (max-width: 575px) {
+
+		&__image {
+			width: 160px;
+			height: auto;
+		}
+	}
+}

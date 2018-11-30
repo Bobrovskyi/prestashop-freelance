@@ -1,0 +1,17 @@
+.languages {
+
+	&__list {
+		@include unstyled-list();
+	}
+
+	&__item {
+		display: inline-block;
+	}
+
+	@media (max-width: 991px) {
+
+		&__list {
+			text-align: center;
+		}
+	}
+}
